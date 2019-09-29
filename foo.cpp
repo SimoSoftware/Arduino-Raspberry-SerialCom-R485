@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    TSerial serial("/dev/ttyUSB1", 2000000);
+    TSerial serial("/dev/ttyUSB0", 2000000);
     serial.open();
     const char* str;
     while(true)

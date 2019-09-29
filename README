@@ -23,4 +23,16 @@ CODICE DI ESEMPIO LATO Raspberry:
 file: foo.cpp
 ==================================================================================
 
+PROGRAMMA ESEMPIO LETTURA:
+==================================================================================
+$> ./RS485 -1 /dev/ttyUSB0 -s115200
+==================================================================================
+[-1 numero di sotto-programma da eseguire; nome dispositivo; -s115200
+  (prefisso -s per specificare velocita') non obbligatorio]
+
+Se non avete i permessi di esecuzione lanciate il comando:
+
+$> chmod a+wrx RS485
+(Eventualmente anche con davanti il comando 'sudo')
+
 GOOD LUCK
