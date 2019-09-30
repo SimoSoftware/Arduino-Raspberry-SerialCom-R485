@@ -8,31 +8,30 @@ PRIMA RAPIDA IMPLEMENTAZIONE DELLA LIBRERIA SERIAL
   Version:          1.1.0 [version.new-features.fix-patch]
 
 
+==================================================================================
 COMPILAZIONE:
   Per compilare basta agiungere alla fine della riga di comando di g++:
-  "-L . -lserial" (specifica path in cui cercare, specifica nome libreria statica)
-    (senza virgolette)
+    "-L . -lserial"
+    [-L specifica path in cui cercare, -l specifica nome libreria statica.]
+  e.g.:
+  $>  g++ foo.cpp -o foo -L. -lserial
+      
 
+==================================================================================
 CODICE DI ESEMPIO LATO Arduino:
-==================================================================================
-file: time_stamp.ino
+  file: time_stamp.ino
+CODICE DI ESEMPIO LATO Raspberry:
+  file: foo.cpp
 ==================================================================================
 
-CODICE DI ESEMPIO LATO Raspberry:
-==================================================================================
-file: foo.cpp
-==================================================================================
 
 PROGRAMMA ESEMPIO LETTURA:
-==================================================================================
-$> ./RS485 -1 /dev/ttyUSB0 -s115200
-==================================================================================
+  $>  ./RS485 -1 /dev/ttyUSB0 -s115200
 [-1 numero di sotto-programma da eseguire; nome dispositivo; -s115200
   (prefisso -s per specificare velocita') non obbligatorio]
 
 Se non avete i permessi di esecuzione lanciate il comando:
-
-$> chmod a+wrx RS485
+  $>  chmod a+wrx RS485
 (Eventualmente anche con davanti il comando 'sudo')
 
 GOOD LUCK
