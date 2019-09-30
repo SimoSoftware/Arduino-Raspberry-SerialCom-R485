@@ -32,4 +32,4 @@ public:
     /* Copy/move constructors/assignment operators will be added in future versions */
 };
 
-#endif // SERIALCLASS_HEADER
+#endif // SERIALCLASS_H
