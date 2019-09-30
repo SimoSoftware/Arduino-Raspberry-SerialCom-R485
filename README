@@ -1,5 +1,5 @@
 ==================================================================================
-PRIMA RAPIDA IMPLEMENTAZIONE DELLA LIBRERIA SERIAL
+FIRST IMPLEMENTATION SERIAL LIBRARY
   Name:             serial
   Correlated files: libserial.a serial.h
   Author:           Simone Palacino
@@ -9,29 +9,28 @@ PRIMA RAPIDA IMPLEMENTAZIONE DELLA LIBRERIA SERIAL
 
 
 ==================================================================================
-COMPILAZIONE:
-  Per compilare basta agiungere alla fine della riga di comando di g++:
+TO BUILD:
+  Add at the end of the g++ command line:
     "-L . -lserial"
-    [-L specifica path in cui cercare, -l specifica nome libreria statica.]
+    [-L specifies the path to the library, -l specifies the library name.]
   e.g.:
   $>  g++ foo.cpp -o foo -L. -lserial
       
 
 ==================================================================================
-CODICE DI ESEMPIO LATO Arduino:
+SAMPLE CODE FOR Arduino:
   file: time_stamp.ino
-CODICE DI ESEMPIO LATO Raspberry:
+SAMPLE CODE FOR Raspberry:
   file: foo.cpp
 ==================================================================================
 
 
-PROGRAMMA ESEMPIO LETTURA:
+EXAMPLE PROGRAM (read):
   $>  ./RS485 -1 /dev/ttyUSB0 -s115200
-[-1 numero di sotto-programma da eseguire; nome dispositivo; -s115200
-  (prefisso -s per specificare velocita') non obbligatorio]
+[-1 subroutine; device name; -s115200 (prefisso -s per specificare velocita')
+  non obbligatorio, default=115200]
 
-Se non avete i permessi di esecuzione lanciate il comando:
+Use the chmod command to change permissions
   $>  chmod a+wrx RS485
-(Eventualmente anche con davanti il comando 'sudo')
-
+  
 GOOD LUCK
