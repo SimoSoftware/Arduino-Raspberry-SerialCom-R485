@@ -21,9 +21,11 @@ class TSerial
 {
 public:
     void            close();
-    void            open();
+    bool            is_open();
+    void            open(bool print_info = false);
     const char*     readline();
     struct termios& serial_port_settings(); /* This will be removed in future versions  */
+    void            set_dev(const char* dev);
     void            set_speed(int speed);
 
     TSerial(int speed = 115200);
